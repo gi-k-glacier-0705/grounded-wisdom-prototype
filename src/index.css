@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 14% 95%;
+    --foreground: 140 14% 26%;
+    --card: 40 14% 95%;
+    --card-foreground: 140 14% 26%;
+    --popover: 40 14% 95%;
+    --popover-foreground: 140 14% 26%;
+    --primary: 88 14% 46%;
+    --primary-foreground: 60 33% 97%;
+    --secondary: 60 9% 68%;
+    --secondary-foreground: 140 14% 26%;
+    --muted: 40 14% 91%;
+    --muted-foreground: 140 8% 40%;
+    --accent: 18 36% 54%;
+    --accent-foreground: 60 33% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 60 9% 68%;
+    --input: 60 9% 68%;
+    --ring: 88 14% 46%;
+    --radius: 0.5rem;
+
+    --sage: #78866B;
+    --taupe: #B7B7A4;
+    --parchment: #F5F3EE;
+    --clay: #B07D62;
+    --deep-moss: #3A4A3F;
+    --mist: #E8E4DE;
+    --bio-white: #F8FFE5;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: var(--parchment);
+    color: var(--deep-moss);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+  }
+
+  ::selection {
+    background-color: var(--sage);
+    color: var(--bio-white);
+  }
+}
+
+@layer components {
+  .liquid-glass {
+    background: rgba(245, 243, 238, 0.08);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(6px) saturate(140%);
+    -webkit-backdrop-filter: blur(6px) saturate(140%);
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.15) 20%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0.15) 80%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.25;
+  }
+
+  .liquid-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      radial-gradient(ellipse 90% 40% at 50% 0%, rgba(255, 255, 255, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 35% at 65% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .font-display {
+    font-family: 'Instrument Serif', serif;
+  }
+
+  .font-body {
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  .text-sage { color: var(--sage); }
+  .text-taupe { color: var(--taupe); }
+  .text-parchment { color: var(--parchment); }
+  .text-clay { color: var(--clay); }
+  .text-deep-moss { color: var(--deep-moss); }
+  .text-mist { color: var(--mist); }
+  .text-bio-white { color: var(--bio-white); }
+  .bg-sage { background-color: var(--sage); }
+  .bg-taupe { background-color: var(--taupe); }
+  .bg-parchment { background-color: var(--parchment); }
+  .bg-clay { background-color: var(--clay); }
+  .bg-deep-moss { background-color: var(--deep-moss); }
+  .bg-mist { background-color: var(--mist); }
+  .border-taupe { border-color: var(--taupe); }
+}
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes ensoDraw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(120, 134, 107, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(120, 134, 107, 0.6);
+  }
+}
