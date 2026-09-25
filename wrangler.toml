@@ -1,5 +1,0 @@
-name = "built-beautifully"
-type = "javascript"
-
-[env.production]
-name = "built-beautifully"
