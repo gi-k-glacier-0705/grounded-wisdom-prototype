@@ -4,7 +4,7 @@ An experimental, interactive landing page exploring grounded wisdom, humor, heal
 
 [**View the live site**](https://kimis-prototype.geekgelasia.dev/)
 
-![Ground Wisdom website preview](public/gif_for_README.gif)
+![Ground Wisdom website preview](public/gif_for_preview.gif)
 
 ## About
 
