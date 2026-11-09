@@ -1,74 +1,53 @@
-# React + TypeScript + Vite
+# Ground Wisdom
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An experimental, interactive landing page exploring grounded wisdom, humor, healing, and activism through a calm, nature-inspired visual design.
 
-Currently, two official plugins are available:
+[**View the live site**](https://kimis-prototype.geekgelasia.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Ground Wisdom website preview](public/social-preview.jpg)
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ground Wisdom is a visual web prototype built around the idea of making reflective content feel engaging and approachable. It combines editorial typography, layered visuals, and interactive details in a single-page experience.
 
-## Expanding the ESLint configuration
+This project is a design and front-end experiment, not a finished product. It is not under active development, and some sections or interactions may be incomplete.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Highlights
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- A multi-section, single-page experience, from an animated introduction through wisdom, humor, healing, activism, and support.
+- Interactive visual experiments, including animated graphics, card interactions, and a breathing exercise.
+- A responsive interface built with React and TypeScript.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Built with
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React 19 and TypeScript
+- Vite
+- Tailwind CSS
+- Three.js and React Three Fiber
+- GSAP
+
+## Run locally
+
+Requires Node.js 20 or later.
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To check the production build and lint the project:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run lint
 ```
-## [Current live deployment here](https://kimis-prototype.geekgelasia.dev/)
+
+## Project status
+
+This is a portfolio prototype. It is shared to showcase the design direction and selected front-end experiments; it is not a promise of ongoing maintenance or support.
+
+## Credits and licensing
+
+The project uses third-party libraries listed in `package.json`. Please check the source and licensing of visual assets before reusing them.
+
+No license is currently provided for this repository. Unless a license is added, don’t assume the code or assets are available for reuse.
