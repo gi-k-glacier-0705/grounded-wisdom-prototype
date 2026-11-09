@@ -71,3 +71,4 @@ export default defineConfig([
   },
 ])
 ```
+## [Current live deployment here](https://kimis-prototype.geekgelasia.dev/)
